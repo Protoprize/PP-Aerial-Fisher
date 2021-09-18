@@ -1,4 +1,4 @@
-package com.proto.aerial;
+package com.proto.aerial.data;
 
 public enum aerialStates {
     GET_BIRD,

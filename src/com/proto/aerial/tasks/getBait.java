@@ -1,6 +1,6 @@
 package com.proto.aerial.tasks;
 
-import com.proto.aerial.aerialData;
+import com.proto.aerial.data.aerialData;
 import org.powbot.api.Condition;
 import org.powbot.api.rt4.*;
 

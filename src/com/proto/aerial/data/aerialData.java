@@ -1,4 +1,4 @@
-package com.proto.aerial;
+package com.proto.aerial.data;
 
 import org.powbot.api.Area;
 import org.powbot.api.Tile;
