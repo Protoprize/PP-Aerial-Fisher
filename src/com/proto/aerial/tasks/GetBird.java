@@ -1,14 +1,14 @@
 package com.proto.aerial.tasks;
 
-import com.proto.aerial.data.aerialData;
+import com.proto.aerial.data.AerialData;
 import org.powbot.api.Condition;
 import org.powbot.api.Random;
 import org.powbot.api.rt4.*;
 
-public class getBird extends Task{
+public class GetBird extends Task{
     @Override
     public boolean activate() {
-        return Equipment.stream().id(aerialData.equippedBird).isEmpty() && Equipment.stream().id(aerialData.thrownBird).isEmpty();
+        return Equipment.stream().id(AerialData.ID_EQUIPPED_BIRD).isEmpty() && Equipment.stream().id(AerialData.ID_THROWN_BIRD).isEmpty();
     }
 
     @Override
@@ -18,7 +18,7 @@ public class getBird extends Task{
             cont.click();
             Condition.sleep(Random.nextInt(1200, 1800));
         } else {
-            Npc npc = Npcs.stream().id(aerialData.AlryTheAngler).firstOrNull();
+            Npc npc = Npcs.stream().id(AerialData.ALRY_NPC).firstOrNull();
             if (npc != null) {
                 if (npc.interact("Get bird")) {
                     Condition.wait(() -> Widgets.widget(217).component(4).valid(), 200, 20);

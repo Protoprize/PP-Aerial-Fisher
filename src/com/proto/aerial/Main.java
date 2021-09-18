@@ -1,15 +1,12 @@
 package com.proto.aerial;
 
 import com.proto.aerial.tasks.*;
-import org.powbot.api.Condition;
-import org.powbot.api.Random;
 import org.powbot.api.rt4.*;
 import org.powbot.api.rt4.walking.model.Skill;
 import org.powbot.api.script.AbstractScript;
 import org.powbot.api.script.ScriptManifest;
 import org.powbot.api.script.paint.Paint;
 import org.powbot.api.script.paint.PaintBuilder;
-import org.powbot.mobile.script.ScriptLoader;
 import org.powbot.mobile.script.ScriptManager;
 
 import java.util.ArrayList;
@@ -35,11 +32,11 @@ public class Main extends AbstractScript {
 
         addPaint(p);
 
-        taskList.add(new getBird());
-        taskList.add(new cutBait());
-        taskList.add(new getBait());
-        taskList.add(new sleep());
-        taskList.add(new fish());
+        taskList.add(new GetBird());
+        taskList.add(new CutBait());
+        taskList.add(new GetBait());
+        taskList.add(new Sleep());
+        taskList.add(new Fish());
     }
 
     @Override
